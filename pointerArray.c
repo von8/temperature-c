@@ -2,10 +2,11 @@
 void main(){
     int a[10];
     int *p;
-    for(p=&a[0];p<(a+10);p++)
+    for(p=a;p<(a+10);p++)
         scanf("%d",p);
     printf("\n");
-    for(p=&a[0];p<(a+10);p++)
-        printf("%d",*p);
+    p=a;
+    for(int i=0;i<10;i++)
+        printf("%d",*p++);
     printf("\n");
 }
